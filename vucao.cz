@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUCAOFOODS | Potraviny Košíře</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --vucao-black: #1d1d1f;
+            --vucao-gray: #86868b;
+            --star-gold: #ffcc00;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--vucao-black);
+            line-height: 1.5;
+            background-color: #ffffff;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- HLAVIČKA --- */
+        header {
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .logo { font-size: 32px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; }
+
+        /* --- SLIDER ZNAČEK --- */
+        .brands-section { padding: 40px 0; overflow: hidden; background: #fafafa; }
+        .brands-title { text-align: center; font-size: 12px; font-weight: 700; color: #a0a0a0; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 30px; }
+        
+        .slider-track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            animation: scroll 35s linear infinite;
+        }
+        .partner-item { display: flex; align-items: center; padding: 0 30px; white-space: nowrap; }
+        .separator { width: 6px; height: 6px; background: #ddd; transform: rotate(45deg); margin-left: 60px; }
+
+        /* Styly značek */
+        .vilgain { color: #e30613; font-weight: 900; font-size: 22px; text-transform: lowercase; }
+        .sufan { color: #3d2b1f; font-weight: 800; font-size: 18px; text-transform: uppercase; letter-spacing: 2px; }
+        .druid { color: #008631; font-weight: 900; font-size: 20px; }
+        .gingles { color: #000; font-weight: 400; font-size: 20px; text-transform: uppercase; letter-spacing: 4px; }
+        .vinarstvi { color: #6b0f1a; font-family: serif; font-size: 20px; font-weight: bold; }
+        .prosekarna { color: #c5a059; font-weight: 700; font-size: 19px; text-transform: uppercase; letter-spacing: 4px; }
+
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* --- RECENZE --- */
+        .reviews-section { padding: 60px 0; }
+        .rating-summary { text-align: center; margin-bottom: 40px; }
+        .rating-summary h2 { font-size: 48px; margin: 0; }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .review-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #efefef;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+        .review-card:hover { transform: translateY(-5px); }
+        .stars { color: var(--star-gold); margin-bottom: 10px; font-size: 14px; }
+        .review-text { font-style: italic; font-size: 14px; color: #444; margin-bottom: 20px; }
+        .reviewer { display: flex; align-items: center; gap: 10px; border-top: 1px solid #f9f9f9; padding-top: 15px; }
+        .avatar { width: 35px; height: 35px; background: #eee; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 12px; }
+
+        /* --- INFO & PATIČKA --- */
+        footer { background: #1d1d1f; color: #fff; padding: 50px 0; text-align: center; font-size: 14px; }
+        .funko-info { color: #86868b; font-size: 12px; margin-top: 30px; border-top: 1px solid #333; padding-top: 20px; }
+
+        /* --- RESPONSIVITA (MOBIL) --- */
+        @media (max-width: 600px) {
+            .logo { font-size: 24px; }
+            .review-card { padding: 20px; }
+            .rating-summary h2 { font-size: 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">VUCAOFOODS</div>
+        <p>Vaše lokální potraviny v Košířích</p>
+    </div>
+</header>
+
+<section class="brands-section">
+    <div class="brands-title">Značky, které u nás najdete</div>
+    <div class="slider-track">
+        <div class="partner-item"><span class="vilgain">vilgain</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="sufan">Šufan</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="druid">Druid</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="gingles">Gingles</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="vinarstvi">Vinařství Hodonín</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="prosekarna">Prosekárna</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="vilgain">vilgain</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="sufan">Šufan</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="druid">Druid</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="gingles">Gingles</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="vinarstvi">Vinařství Hodonín</span><div class="separator"></div></div>
+        <div class="partner-item"><span class="prosekarna">Prosekárna</span><div class="separator"></div></div>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <div class="container">
+        <div class="rating-summary">
+            <h2>5,0</h2>
+            <div class="stars">★★★★★</div>
+            <p>26 recenzí na Google Maps</p>
+        </div>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Konečně super obchod! Je nově otevřený, majitel je moc fajn, otevřeno celý den a skvělý sortiment."</p>
+                <div class="reviewer">
+                    <div class="avatar">JJ</div>
+                    <div><b>Jakub Jirovec</b></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p class="review-text">"Nově otevřen obchod. Zatím jsem koupil vždy vše co jsem potřeboval. Obsluha je příjemná."</p>
+                <div class="reviewer">
+                    <div class="avatar">RN</div>
+                    <div><b>Robert Nguyen</b></div>
+                </div>
+            </div>
+            </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><b>VUCAOFOODS</b> | Plzeňská, Praha - Košíře</p>
+        <p>Otevřeno denně: 07:00 – 21:00</p>
+        
+        <div class="funko-info">
+            Výrobce Funko: Funko LLC, distribuční centrum Funko EU BV, Zuidplein 36, 1077 XV, Amsterdam, Nizozemsko.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
